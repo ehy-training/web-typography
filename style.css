@@ -1,0 +1,131 @@
+/*RESET*/
+
+:root {
+    --my-column-gap: 16px;
+}
+
+/*RESET*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*LAYOUT*/
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    padding: 1rem 0;
+    border-bottom: 1px solid hsl(200, 21%, 76%);
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--my-column-gap);
+}
+
+/*TYPOGRAPHY*/
+
+body {
+    font-family: 'Source Serif 4', serif;
+    font-size: 4vw;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+h1,
+h3,
+h4 {
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 200;
+}
+
+h1,
+h2 {
+    font-size: 2.6em;
+}
+
+h3 {
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin-bottom: 1em;
+}
+
+
+
+/*RESPONSIVE BREAKPOINTS*/
+
+@media only screen and (min-width: 600px) {
+
+    body {
+        font-size: 2vw
+    }
+
+    .multicol {
+        column-count: 2;
+        column-gap: var(--my-column-gap);
+    }
+
+    .flexbox p {
+        width: calc((100% - var(--my-column-gap)) / 2);
+    }
+
+
+}
+
+
+@media only screen and (min-width: 900px) {
+
+    body {
+        font-size: 1.4vw
+    }
+
+    .multicol {
+        column-count: 3;
+    }
+
+   .flexbox p {
+        width: calc((100% - (var(--my-column-gap) * 2)) / 3);
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+}
